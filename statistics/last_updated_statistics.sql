@@ -7,5 +7,5 @@ SELECT  OBJECT_NAME(s.object_id) AS TableName,
 		sp.modification_counter
 FROM sys.STATS AS s
 CROSS APPLY sys.dm_db_stats_properties(s.object_id, s.stats_id) AS sp
-WHERE OBJECT_NAME(s.object_id) = 'MBONUSCHARGETRANSITEM'        -- Имя таблицы
+WHERE OBJECT_NAME(s.object_id) = 'TableName1'        -- Имя таблицы
 ORDER BY LastUpdated DESC;
